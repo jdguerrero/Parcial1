@@ -22,6 +22,10 @@ appServer.get('/',
 );
 
 
+/**
+ * punto 1 Crear un VideoJuego
+ */
+
 appServer.post("/nuevoVideoJuego", (req,res) =>{
 
    
@@ -40,18 +44,47 @@ appServer.post("/nuevoVideoJuego", (req,res) =>{
     
     videoJuegos.push(videoJuego);
 
+    
+    res.send("Video Juego Creado");
+
+    //res.redirect("/");
+});
+
+/**
+ * Punto 2 . Eliminar por id
+ * appServer.get("/delete/:id", (req,res) =>{
+    
+
+    let pos = videoJuegos.indexOf(req.params.id);
+
+    videoJuegos.splice(pos, 1);
+
+    res.redirect("/");
+});
+ */
+
+
+
+/**
+ * Mostrar Todos Los Video Juegos
+ */
+
+appServer.get("/mostrarVideoJuegos", (req,res) =>{
+
+    
+
+    res.send("Video Juegos en consola");
+
     videoJuegos.forEach(function(videoJuego){
+       
+        console.log("");
         console.log(videoJuego.id);
         console.log(videoJuego.titulo);
         console.log(videoJuego.estudio);
         console.log(videoJuego.añoLanzamiento);
         console.log(videoJuego.descripcion);
         console.log(videoJuego.edadMin);
+        console.log("");
     });
-
-
     
-    res.send("POST USER ADDED");
-
-    res.redirect("/");
 });
