@@ -1,0 +1,19 @@
+{
+  "name": "parcial1",
+  "version": "1.0.0",
+  "description": "Entrega Primer Parcial DEV WEB POLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdguerrero/Parcial1.git"
+  },
+  "author": "Juan David Guerrero Pérez 1720010798 - David Daza 1110010411",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdguerrero/Parcial1/issues"
+  },
+  "homepage": "https://github.com/jdguerrero/Parcial1#readme"
+}
