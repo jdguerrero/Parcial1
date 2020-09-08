@@ -50,9 +50,7 @@ appServer.post("/nuevoVideoJuego", (req,res) =>{
     //res.redirect("/");
 });
 
-/**
- * Punto 2 . Eliminar por id
- * appServer.get("/delete/:id", (req,res) =>{
+appServer.get("/delete/:id", (req,res) =>{
     
 
     let pos = videoJuegos.indexOf(req.params.id);
@@ -61,7 +59,7 @@ appServer.post("/nuevoVideoJuego", (req,res) =>{
 
     res.redirect("/");
 });
- */
+ 
 
 
 
@@ -73,7 +71,7 @@ appServer.get("/mostrarVideoJuegos", (req,res) =>{
 
     
 
-    res.send("Video Juegos en consola");
+    res.send(videoJuegos);
 
     videoJuegos.forEach(function(videoJuego){
        
