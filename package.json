@@ -4,6 +4,7 @@
   "description": "Entrega Primer Parcial DEV WEB POLI",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/jdguerrero/Parcial1/issues"
   },
-  "homepage": "https://github.com/jdguerrero/Parcial1#readme"
+  "homepage": "https://github.com/jdguerrero/Parcial1#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.3.0"
+  }
 }
