@@ -4,6 +4,11 @@ const appServer = express();
 
 const uuid = require("uuid");
 
+appServer.use(express.json());
+
+//const videoJuego = require ('./videoJuego');
+
+
 appServer.listen(3000, ()=>{
     console.log("SERVER IS RUNNING ON PORT 3000");
 });
@@ -18,23 +23,35 @@ appServer.get('/',
 
 
 appServer.post("/nuevoVideoJuego", (req,res) =>{
-    
-    const {titulo,estudio,añoLanzamiento,descripcion,edadMin} = req.body;
 
-    if(!titulo || !estudio || !añoLanzamiento || !descripcion || !edadMin){
-        res.status(400).send("Campos vacios")
-    }
+   
+   const {titulo,estudio,añoLanzamiento,descripcion,edadMin } = req.body;
+
     let videoJuego = {
         //uuid 
         id: uuid.v4(),
         titulo,
         estudio,
         añoLanzamiento,
-        descripcion,
+        descripcion ,
         edadMin
     }
+
     
     videoJuegos.push(videoJuego);
+
+    videoJuegos.forEach(function(videoJuego){
+        console.log(videoJuego.id);
+        console.log(videoJuego.titulo);
+        console.log(videoJuego.estudio);
+        console.log(videoJuego.añoLanzamiento);
+        console.log(videoJuego.descripcion);
+        console.log(videoJuego.edadMin);
+    });
+
+
+    
+    res.send("POST USER ADDED");
 
     res.redirect("/");
 });
